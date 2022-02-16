@@ -17,7 +17,7 @@ namespace BusStopWP
         bool sidebarExpand;
         //public static string connect = "Provider=Microsoft.Jet.OLEDB.4.0;Data source=busstop.mdb;";
         //public OleDbConnection myConnection;
-        public static string connectODBC = "Dns=busstop;";
+        public static string connectODBC = "Dsn=busstop;";
         // Создаем переменную класса ОдбсКоннекшен
 
         public OdbcConnection myOdbcConnection;
@@ -105,8 +105,12 @@ namespace BusStopWP
 
         private void FormDB_Load(object sender, EventArgs e)
         {
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "dataSet3.db_bus". При необходимости она может быть перемещена или удалена.
+            this.db_busTableAdapter4.Fill(this.dataSet3.db_bus);
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "dataSet1.db_bus". При необходимости она может быть перемещена или удалена.
+            //this.db_busTableAdapter3.Fill(this.dataSet1.db_bus);
             // TODO: данная строка кода позволяет загрузить данные в таблицу "busstopDataSet2.db_bus". При необходимости она может быть перемещена или удалена.
-            this.db_busTableAdapter2.Fill(this.busstopDataSet2.db_bus);
+            //this.db_busTableAdapter2.Fill(this.busstopDataSet2.db_bus);
             // TODO: данная строка кода позволяет загрузить данные в таблицу "busstopDataSet1.db_bus". При необходимости она может быть перемещена или удалена.
            // this.db_busTableAdapter1.Fill(this.busstopDataSet1.db_bus);
             // TODO: данная строка кода позволяет загрузить данные в таблицу "busstopDataSet.db_bus". При необходимости она может быть перемещена или удалена.
@@ -134,9 +138,9 @@ namespace BusStopWP
 
         public void gridUpdate()
         {
-            this.db_busTableAdapter2.Fill(this.busstopDataSet2.db_bus);
+            this.db_busTableAdapter4.Fill(this.dataSet3.db_bus);
             MessageBox.Show("Данные загружены");
-            this.db_busTableAdapter2.Fill(this.busstopDataSet2.db_bus);
+            this.db_busTableAdapter4.Fill(this.dataSet3.db_bus);
 
 
         }
@@ -155,9 +159,9 @@ namespace BusStopWP
                 //OleDbCommand command = new OleDbCommand(query, myConnection);
                 OdbcCommand command = new OdbcCommand(query, myOdbcConnection);
                 command.ExecuteNonQuery();
-                this.db_busTableAdapter2.Fill(this.busstopDataSet2.db_bus);
+                this.db_busTableAdapter4.Fill(this.dataSet3.db_bus);
                 MessageBox.Show("Стоянка машины продлена");
-                this.db_busTableAdapter2.Fill(this.busstopDataSet2.db_bus);
+                this.db_busTableAdapter4.Fill(this.dataSet3.db_bus);
 
             }
         }

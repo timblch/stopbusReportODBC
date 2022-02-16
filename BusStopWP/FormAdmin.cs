@@ -16,7 +16,7 @@ namespace BusStopWP
     {
         //public static string connect = "Provider=Microsoft.Jet.OLEDB.4.0;Data source=busstop.mdb;";
         //public OleDbConnection myConnection;
-        public static string connectODBC = "Dns=busstop;";
+        public static string connectODBC = "Dsn=busstop;";
         // Создаем переменную класса ОдбсКоннекшен
 
         public OdbcConnection myOdbcConnection;
@@ -92,6 +92,19 @@ namespace BusStopWP
         {
             new Form1().Show();
             this.Hide();
+        }
+
+        private void FormAdmin_Load(object sender, EventArgs e)
+        {
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "dataSet7.db_tipsts". При необходимости она может быть перемещена или удалена.
+            this.db_tipstsTableAdapter.Fill(this.dataSet7.db_tipsts);
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "dataSet6.db_users". При необходимости она может быть перемещена или удалена.
+            this.db_usersTableAdapter.Fill(this.dataSet6.db_users);
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "dataSet5.db_tarif". При необходимости она может быть перемещена или удалена.
+            this.db_tarifTableAdapter.Fill(this.dataSet5.db_tarif);
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "dataSet4.db_bus". При необходимости она может быть перемещена или удалена.
+            this.db_busTableAdapter.Fill(this.dataSet4.db_bus);
+
         }
     }
 }

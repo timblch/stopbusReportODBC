@@ -70,15 +70,21 @@ namespace BusStopWP
             this.dbsumcashDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dbmestoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dbuserDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dbbusBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.busstopDataSet2 = new BusStopWP.busstopDataSet2();
             this.dbbusBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.busstopDataSet = new BusStopWP.busstopDataSet();
             this.db_busTableAdapter = new BusStopWP.busstopDataSetTableAdapters.db_busTableAdapter();
             this.busstopDataSet1 = new BusStopWP.busstopDataSet1();
             this.dbbusBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.db_busTableAdapter1 = new BusStopWP.busstopDataSet1TableAdapters.db_busTableAdapter();
-            this.busstopDataSet2 = new BusStopWP.busstopDataSet2();
-            this.dbbusBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.db_busTableAdapter2 = new BusStopWP.busstopDataSet2TableAdapters.db_busTableAdapter();
+            this.dataSet1 = new BusStopWP.DataSet1();
+            this.dbbusBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
+            this.db_busTableAdapter3 = new BusStopWP.DataSet1TableAdapters.db_busTableAdapter();
+            this.dataSet3 = new BusStopWP.DataSet3();
+            this.dbbusBindingSource4 = new System.Windows.Forms.BindingSource(this.components);
+            this.db_busTableAdapter4 = new BusStopWP.DataSet3TableAdapters.db_busTableAdapter();
             this.siderbarContainer.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.menuButton)).BeginInit();
@@ -92,12 +98,16 @@ namespace BusStopWP
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.flowLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dbbusBindingSource2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.busstopDataSet2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dbbusBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.busstopDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.busstopDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dbbusBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.busstopDataSet2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dbbusBindingSource2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dbbusBindingSource3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dbbusBindingSource4)).BeginInit();
             this.SuspendLayout();
             // 
             // siderbarContainer
@@ -406,7 +416,7 @@ namespace BusStopWP
             this.dbsumcashDataGridViewTextBoxColumn,
             this.dbmestoDataGridViewTextBoxColumn,
             this.dbuserDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.dbbusBindingSource2;
+            this.dataGridView1.DataSource = this.dbbusBindingSource4;
             this.dataGridView1.Location = new System.Drawing.Point(81, 65);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
@@ -553,6 +563,16 @@ namespace BusStopWP
             this.dbuserDataGridViewTextBoxColumn.ReadOnly = true;
             this.dbuserDataGridViewTextBoxColumn.Width = 250;
             // 
+            // dbbusBindingSource2
+            // 
+            this.dbbusBindingSource2.DataMember = "db_bus";
+            this.dbbusBindingSource2.DataSource = this.busstopDataSet2;
+            // 
+            // busstopDataSet2
+            // 
+            this.busstopDataSet2.DataSetName = "busstopDataSet2";
+            this.busstopDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // dbbusBindingSource
             // 
             this.dbbusBindingSource.DataMember = "db_bus";
@@ -581,19 +601,37 @@ namespace BusStopWP
             // 
             this.db_busTableAdapter1.ClearBeforeFill = true;
             // 
-            // busstopDataSet2
-            // 
-            this.busstopDataSet2.DataSetName = "busstopDataSet2";
-            this.busstopDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // dbbusBindingSource2
-            // 
-            this.dbbusBindingSource2.DataMember = "db_bus";
-            this.dbbusBindingSource2.DataSource = this.busstopDataSet2;
-            // 
             // db_busTableAdapter2
             // 
             this.db_busTableAdapter2.ClearBeforeFill = true;
+            // 
+            // dataSet1
+            // 
+            this.dataSet1.DataSetName = "DataSet1";
+            this.dataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // dbbusBindingSource3
+            // 
+            this.dbbusBindingSource3.DataMember = "db_bus";
+            this.dbbusBindingSource3.DataSource = this.dataSet1;
+            // 
+            // db_busTableAdapter3
+            // 
+            this.db_busTableAdapter3.ClearBeforeFill = true;
+            // 
+            // dataSet3
+            // 
+            this.dataSet3.DataSetName = "DataSet3";
+            this.dataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // dbbusBindingSource4
+            // 
+            this.dbbusBindingSource4.DataMember = "db_bus";
+            this.dbbusBindingSource4.DataSource = this.dataSet3;
+            // 
+            // db_busTableAdapter4
+            // 
+            this.db_busTableAdapter4.ClearBeforeFill = true;
             // 
             // FormDB
             // 
@@ -631,12 +669,16 @@ namespace BusStopWP
             this.flowLayoutPanel2.ResumeLayout(false);
             this.flowLayoutPanel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dbbusBindingSource2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.busstopDataSet2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dbbusBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.busstopDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.busstopDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dbbusBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.busstopDataSet2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dbbusBindingSource2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dbbusBindingSource3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dbbusBindingSource4)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -692,5 +734,11 @@ namespace BusStopWP
         private busstopDataSet2 busstopDataSet2;
         private System.Windows.Forms.BindingSource dbbusBindingSource2;
         private busstopDataSet2TableAdapters.db_busTableAdapter db_busTableAdapter2;
+        private DataSet1 dataSet1;
+        private System.Windows.Forms.BindingSource dbbusBindingSource3;
+        private DataSet1TableAdapters.db_busTableAdapter db_busTableAdapter3;
+        private DataSet3 dataSet3;
+        private System.Windows.Forms.BindingSource dbbusBindingSource4;
+        private DataSet3TableAdapters.db_busTableAdapter db_busTableAdapter4;
     }
 }

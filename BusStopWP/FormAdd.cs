@@ -16,7 +16,7 @@ namespace BusStopWP
     {
         //public static string connect = "Provider=Microsoft.Jet.OLEDB.4.0;Data source=busstop.mdb;";
         //public OleDbConnection myConnection;
-        public static string connectODBC = "Dns=busstop;";
+        public static string connectODBC = "Dsn=busstop;";
         // Создаем переменную класса ОдбсКоннекшен
 
         public OdbcConnection myOdbcConnection;
